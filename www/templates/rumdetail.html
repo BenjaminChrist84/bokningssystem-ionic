@@ -1,0 +1,29 @@
+<ion-view view-title="Rum detail">
+    <ion-content ng-controller="mainCtrl" class="all-back">
+        <div class="card">   
+            <div class="headline-back">
+                <!--Här använda jag inonic slide-box för slider genom flera bilder-->
+                <ion-slide-box on-slide-changed="slideHasChanged($index)">
+                    <ion-slide>
+                        <img ng-src="img/{{myNewBookning.fullrum.name}}.jpg" class="image-detail" alt="{{myNewBookning.fullrum.name}} picture">
+                    </ion-slide>
+                    <ion-slide>
+                        <img ng-src="img/tromsö.jpg" class="image-detail" alt="tromsö">
+                    </ion-slide>
+                    <ion-slide>
+                        <img ng-src="img/frukost.jpg" class="image-detail" alt="frukost">
+                    </ion-slide>
+                    <ion-slide>
+                        <img ng-src="img/hostel.jpg" class="image-detail" alt="hostel">
+                    </ion-slide>
+                </ion-slide-box>
+                <!--Här anropas med hjälp av AngularJS objektet i objeket och använda AngularJS filter för att få rummets name i storabokstava-->
+                <h2 class="center-text text-height">{{myNewBookning.fullrum.name | uppercase}}</h2>
+                <h3 class="center-text text-height">{{myNewBookning.fullrum.kapacitet}}</h3>
+                <p class="center-text text-height">{{myNewBookning.fullrum.beskrivning}}</p>
+                <h4 class="center-text text-height">{{myNewBookning.fullrum.pris}}sek / natt</h4>
+            </div>
+            <a ng-href="#/info-name"class="button center-button">Välj detta rum</a>
+        </div>                
+    </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view view-title="Rum list">
+    <ion-content class="all-back">
+        <div class="card center-text">   
+            <h2 class="headline-back">Välj rum</h2>
+        <ion-list ng-controller="mainCtrl" class="all-back">
+            <!--här använda jag AngularJS för att gå genom alla värden i json filen och använda ng-click för att anropa function i JavaaScript filen.-->
+            <ion-item ng-repeat="item in myRum" ng-href="#/rumdetail/{{item.id}}" ng-click="copieRum(item)" class="item-thumbnail-left item-text-wrap">
+                <!--här anropa jag med ng-src image filen-->
+                <img ng-src="img/{{item.name}}.jpg" alt="{{item.name}} picture">
+                <h2>{{item.name | uppercase}}</h2>
+                <h3>{{item.kapacitet}}</h3>
+                <p>{{item.beskrivning | limitTo:30}} ...</p>
+                <h4>{{item.pris}} sek / natt</h4>
+            </ion-item>
+        </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

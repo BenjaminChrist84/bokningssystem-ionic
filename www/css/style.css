@@ -1,0 +1,97 @@
+.home
+{background: url("../img/background.jpg") no-repeat center center fixed;
+-webkit-background-size: cover; 
+-moz-background-size: cover;
+-o-background-size: cover; 
+background-size: cover; 
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.center-home{
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 30%;
+    display: block;
+}
+
+.center-button{
+    margin-left: auto; 
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.all-back{
+  background: #283e51; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#283e51, #4b79a1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#283e51, #4b79a1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#283e51, #4b79a1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#283e51, #4b79a1); /* Standard syntax */
+}
+
+.warning{
+    background-color: darkorange;
+}
+
+.headline-back{
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.card{
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+.item-input{
+    height: 50px;
+}
+
+#logo-image{
+    width: 60%;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.text-rum-det{
+    height: 30px;
+    text-align: center;
+}
+
+.image-detail{
+    width: 100%;
+}
+
+.table{
+    width: 100%;
+    background-color: whitesmoke;
+    text-align: left;
+}
+
+.tr{
+     border: solid black 1px;   
+}
+
+#image-confirm{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#end{
+   margin-top: 50%; 
+}
+
+@media screen and (min-width: 960px) {
+    .image-detail{
+        width: 50%;
+    }
+}

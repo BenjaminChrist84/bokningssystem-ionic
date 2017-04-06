@@ -1,0 +1,42 @@
+[
+    {
+        "id":"0",
+        "name":"enkel-lite",
+        "kapacitet":"max 1 person",
+        "imageURL":"/img/enkel-lite.jpg",
+        "beskrivning":"Enkelrum bara med säng och badrum",
+        "pris":"1500"
+    },
+    {   
+        "id":"1",
+        "name":"enkel-sup",
+        "kapacitet":"max 1 person",
+        "imageURL":"/img/enkel-sup.jpg",
+        "beskrivning":"Enkelrum med TV, bar och badrum",
+        "pris":"2000"
+    },
+    {
+        "id":"2",
+        "name":"dubbel-lite",
+        "kapacitet":"max 2 person",
+        "imageURL":"/img/dubbel-lite.jpg",
+        "beskrivning":"Dubbelrum bara med dubbelsäng och badrum",
+        "pris":"2000"
+    },
+    {
+        "id":"3",
+        "name":"dubbel-sup",
+        "kapacitet":"max 2 person",
+        "imageURL":"/img/dubbel-sup.jpg",
+        "beskrivning":"Dubbelrum med TV, Telefon, Bar och badrum",
+        "pris":"2500"
+    },
+    {
+        "id":"4",
+        "name":"family",
+        "kapacitet":"max 5 person",
+        "imageURL":"/img/family.jpg",
+        "beskrivning":"Familierum med dubbelsäng, två enkel säng, vid behov ett extra säng och två badrum",
+        "pris":"3500"
+    }
+]

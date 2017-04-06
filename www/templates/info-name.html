@@ -1,0 +1,39 @@
+<ion-view view-title="Contact info">
+    <ion-content class="all-back">
+        <div class="card">               
+                <ion-list ng-controller="mainCtrl">
+                <!--här användas html validering-->
+                <form name="userForm" novalidate>
+                   
+                    <label class="item item-input">
+                        <span class="input-label">Förnamn: </span>
+                        <input type="text" name="first" placeholder="Firstname" ng-model="myNewBookning.firstName" ng-minlength="2" required>
+                    </label>
+                    <!--här användas AngularJS för att visa felmedelade vid vaidering-->
+                    <p ng-show="userForm.first.$invalid && !userForm.first.$pristine" class="warning">*skriv in ditt förnamn</p> 
+                    
+                    <label class="item item-input">
+                        <span class="input-label">Efternamn</span>
+                        <input type="text" name="last" placeholder="Lastname" ng-model="myNewBookning.lastName" type="text" ng-minlength="2" required>
+                    </label>
+                    <p ng-show="userForm.last.$invalid  && !userForm.last.$pristine" class="warning">*skriv in ditt efternamn </p>
+                    
+                    <label class="item item-input">
+                        <span class="input-label">Telefon</span>
+                        <input name="phone" type="number" placeholder="Telefon" ng-minlength="6" ng-model="myNewBookning.telefon" required>
+                    </label>
+                    <p ng-show="userForm.phone.$error.minlength" class="warning">*telefonnummer ska har minst 6 siffror</p>
+                    
+                    <label class="item item-input">
+                        <span class="input-label">E-Mail</span>
+                        <input name="email" type="email" placeholder="E-Mail" ng-model="myNewBookning.eMail" required>
+                    </label>
+                    <p ng-show="userForm.email.$error.email" class="warning">*ingen rätt e-mejl</p>
+                </form> 
+            <!--här användar jag AngularJS för att hålla button disabled till alla krav är uppfylld-->
+                <a ng-disabled="userForm.$invalid" ng-href="#/confirm" class="button center-button">Bekräfta</a>            
+
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

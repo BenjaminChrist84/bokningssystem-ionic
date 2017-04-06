@@ -1,0 +1,53 @@
+<ion-view view-title="Confirm">
+    <ion-content ng-controller="mainCtrl" class="all-back">
+        <div class="card">   
+                <img ng-src="img/{{myNewBookning.fullrum.name}}.jpg" id="image-confirm" alt="{{myNewBookning.fullrum.name}} picture">
+                
+                <!--en tabel som visa med hjälp av AngularJS alla information-->
+                <table class="table">
+                    <tr class="tr">
+                        <th>Categorie: </th>
+                        <th>{{myNewBookning.fullrum.name}}</th> 
+                    </tr>
+                    <tr class="tr">
+                        <td>Pris per natt:</td>
+                        <td>{{myNewBookning.fullrum.pris}} sek</td> 
+                    </tr>
+                    <tr class="tr">
+                        <td>Förnamn:</td>
+                        <td>{{myNewBookning.firstName}}</td>
+                    </tr>
+                        <tr class="tr">
+                        <td>Efternamn:</td>
+                        <td>{{myNewBookning.lastName}}</td>
+                    </tr>
+                        <tr class="tr">
+                        <td>Vuxna:</td>
+                        <td>{{myNewBookning.antalVuxna}}</td>
+                    </tr>
+                        <tr class="tr">
+                        <td>Barn:</td>
+                        <td>{{myNewBookning.antalBarn}}</td>
+                    </tr>
+                        <tr class="tr">
+                        <td>Telefon:</td>
+                        <td>{{myNewBookning.telefon}}</td>
+                    </tr>
+                        <tr class="tr">
+                        <td>E-Mejl:</td>
+                        <td>{{myNewBookning.eMail}}</td>                    
+                    </tr>
+                        <tr class="tr">
+                        <td>Ankommst:</td>
+                        <td>{{myNewBookning.inDate | date: "yyyy-MM-dd"}}</td>
+                    </tr>
+                        <tr class="tr">
+                        <td>Avresa:</td>
+                        <td>{{myNewBookning.utDate | date: "yyyy-MM-dd"}}</td>
+                    </tr>
+                    </table>
+                
+      <a ng-href="#/klart" class="button center-button">Bekräfta</a>
+      </div>
+    </ion-content>
+</ion-view>

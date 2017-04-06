@@ -1,0 +1,43 @@
+<ion-view view-title="Välja tidsrum">
+    <!--Här använda jag AngularJS för att anropa controller-->
+    <ion-content ng-controller="mainCtrl" class="all-back">
+
+<div class="card">
+    <div>
+        <label class="item item-input">
+        <span class="input-label">Ankommst</span>
+        <!--här hämta ja currentDate från JavaScript och koppla ihop input med myNewBookning.inDate i JavaScript filen-->
+        <input type="date" ng-model="myNewBookning.inDate" min="{{currentDate | date:'yyyy-MM-dd'}}">
+        </label>
+
+        <label class="item item-input">
+        <span class="input-label">Avresa</span>
+        <input type="date" ng-model="myNewBookning.utDate" min="{{currentDate | date:'yyyy-MM-dd'}}">
+        </label>
+
+        <label class="item item-input"> Antal vuxna: <br>
+            <select ng-model="myNewBookning.antalVuxna">
+            <option value="0">---Please select---</option> <!-- not selected / blank option -->
+            <option value="1">1</option> <!-- interpolation -->
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            </select>
+        </label>
+
+        <label class="item item-input"> Antal barn: <br> 
+            <select ng-model="myNewBookning.antalBarn">
+                <option value="0">---Please select---</option> <!-- not selected / blank option -->
+                <option value="1">1</option> <!-- interpolation -->
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </label>
+    </div>
+    
+    <a ng-href="#/rumlist" class="button center-button">next</a>
+</div>
+
+    </ion-content>
+</ion-view>
